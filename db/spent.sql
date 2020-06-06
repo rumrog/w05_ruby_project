@@ -9,8 +9,8 @@ CREATE TABLE tags (
 
 CREATE TABLE merchants (
   id SERIAL PRIMARY KEY,
-  merchant_name VARCHAR(255),
-  tag_id INT
+  merchant_name VARCHAR(255)
+  -- tag_id INT
 );
 
 CREATE TABLE transactions (

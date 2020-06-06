@@ -25,6 +25,20 @@ class Tag
     @id = tag['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE tags
+    SET
+    (
+      tag_name
+    ) =
+    (
+      $1
+    )
+    WHERE id = $2"
+    values = [@tag_name, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "SELECT * FROM tags"
     tag_data = SqlRunner.run(sql)
