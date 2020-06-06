@@ -1,6 +1,8 @@
 require('pry')
 require_relative('../models/tag')
 
+Tag.delete_all()
+
 tag1 = Tag.new({ "tag_name" => "Groceries" })
 tag2 = Tag.new({ "tag_name" => "Restaurants" })
 tag3 = Tag.new({ "tag_name" => "Transport" })
