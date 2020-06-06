@@ -10,3 +10,16 @@ class Tag
     @tag_name = options['tag_name']
   end
 
+  def save()
+    sql = "INSERT INTO tags
+    (
+      tag_name
+    ) =
+    (
+      $1,
+    )
+    RETURNING *"
+    values = [@tag_name]
+    tag = SqlRunner.run(sql, values).first
+    @id = tag['id'].to_i
+  end
