@@ -14,12 +14,15 @@ class Tag
     sql = "INSERT INTO tags
     (
       tag_name
-    ) =
+    )
+    VALUES
     (
-      $1,
+      $1
     )
     RETURNING *"
     values = [@tag_name]
     tag = SqlRunner.run(sql, values).first
     @id = tag['id'].to_i
   end
+
+end
