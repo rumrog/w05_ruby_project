@@ -25,4 +25,8 @@ class Merchant
     @id = tag['id'].to_i
   end
 
+  def self.map_items(merchant_data)
+    result = merchant_data.map { |merchant| Tag.new(merchant) }
+    return result
+  end
 end
