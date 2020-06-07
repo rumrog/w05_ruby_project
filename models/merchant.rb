@@ -54,4 +54,5 @@ class Merchant
     result = merchant_data.map { |merchant| Merchant.new(merchant) }
     return result
   end
+
 end

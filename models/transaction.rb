@@ -45,4 +45,20 @@ class Transaction
     return result
   end
 
+  def tag()
+    sql = 'SELECT * FROM tags
+    WHERE id = $1'
+    values = [@tag_id]
+    results = SqlRunner.run(sql, values)
+    return Tag.new(results.first)
+  end
+
+  def merchant()
+    sql = 'SELECT * FROM merchants
+    WHERE id = $1'
+    values = [@merchant_id]
+    results = SqlRunner.run(sql, values)
+    return Merchant.new(results.first)
+  end
+
 end

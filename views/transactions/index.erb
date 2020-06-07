@@ -1,1 +1,9 @@
-<h1>Transactions</h1>
+<table>
+  <% for transaction in @transactions %>
+  <tr>
+    <td><%= transaction.tag.name %></td>
+    <td><%= transaction.merchant.name %></td>
+    <td>- £<%= sprintf('%.2f', transaction.amount) %></td>
+  </tr>
+  <% end %>
+</table>
