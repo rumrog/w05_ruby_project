@@ -25,6 +25,12 @@ class Merchant
     @id = tag['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM merchants"
+    merchant_data = SqlRunner.run(sql)
+    return Tag.map_items(merchant_data)
+  end
+
   def self.map_items(merchant_data)
     result = merchant_data.map { |merchant| Tag.new(merchant) }
     return result
