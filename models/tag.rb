@@ -3,24 +3,24 @@ require_relative('../db/sql_runner')
 class Tag
 
   attr_reader :id
-  attr_accessor :tag_name
+  attr_accessor :name
 
   def initialize(options)
     @id = options['id'].to_i
-    @tag_name = options['tag_name']
+    @name = options['name']
   end
 
   def save()
     sql = "INSERT INTO tags
     (
-      tag_name
+      name
     )
     VALUES
     (
       $1
     )
     RETURNING *"
-    values = [@tag_name]
+    values = [@name]
     tag = SqlRunner.run(sql, values).first
     @id = tag['id'].to_i
   end
@@ -29,13 +29,13 @@ class Tag
     sql = "UPDATE tags
     SET
     (
-      tag_name
+      name
     ) =
     (
       $1
     )
     WHERE id = $2"
-    values = [@tag_name, @id]
+    values = [@name, @id]
     SqlRunner.run(sql, values)
   end
 
