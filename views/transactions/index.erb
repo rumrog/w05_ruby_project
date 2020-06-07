@@ -6,6 +6,11 @@
     <td>- £<%= sprintf('%.2f', transaction.amount) %></td>
   </tr>
   <% end %>
+  <tr>
+    <td>TOTAL: - £<%= sprintf('%.2f', @total) %></td>
+  </tr>
 </table>
+
+
 
 <a class='new-transaction' href='/transactions/new'>+</a>
