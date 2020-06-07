@@ -20,3 +20,4 @@ CREATE TABLE transactions (
   amount NUMERIC
   -- time TIMESTAMP
 );
+
