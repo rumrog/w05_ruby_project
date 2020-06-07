@@ -12,5 +12,13 @@ tag1.save()
 tag2.save()
 tag3.save()
 
+merchant1 = Merchant.new({ "name" => "Tesco" })
+merchant2 = Merchant.new({ "name" => "Amazon" })
+merchant3 = Merchant.new({ "name" => "ScotRail" })
+
+merchant1.save()
+merchant2.save()
+merchant3.save()
+
 binding.pry
 nil
