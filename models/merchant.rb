@@ -21,8 +21,8 @@ class Merchant
     )
     RETURNING *"
     values = [@name]
-    tag = SqlRunner.run(sql, values).first
-    @id = tag['id'].to_i
+    merchant = SqlRunner.run(sql, values).first
+    @id = merchant['id'].to_i
   end
 
   def update()
