@@ -1,6 +1,6 @@
 <ul>
   <% for merchant in @merchants %>
-    <li><%= merchant.name %></li>
+    <li><%= merchant.name %> <a href='/merchants/<%= merchant.id %>/edit'>Edit</a></li>
   <% end %>
 </ul>
 

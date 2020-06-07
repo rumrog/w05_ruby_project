@@ -11,48 +11,43 @@ class Merchant
   end
 
   def save()
-    sql = "INSERT INTO merchants
-    (
-      name
-    )
-    VALUES
-    (
-      $1
-    )
-    RETURNING *"
+    sql = 'INSERT INTO merchants
+    (name) VALUES ($1) RETURNING *'
     values = [@name]
     merchant = SqlRunner.run(sql, values).first
     @id = merchant['id'].to_i
   end
 
   def update()
-    sql = "UPDATE merchants
-    SET
-    (
-      name
-    ) =
-    (
-      $1
-    )
-    WHERE id = $2"
+    sql = 'UPDATE merchants
+    SET name = $1
+    WHERE id = $2'
     values = [@name, @id]
     SqlRunner.run(sql, values)
   end
 
   def self.all()
-    sql = "SELECT * FROM merchants"
+    sql = 'SELECT * FROM merchants'
     merchant_data = SqlRunner.run(sql)
     return Merchant.map_items(merchant_data)
   end
 
   def self.delete_all()
-    sql = "DELETE FROM merchants"
+    sql = 'DELETE FROM merchants'
     SqlRunner.run(sql)
   end
 
   def self.map_items(merchant_data)
     result = merchant_data.map { |merchant| Merchant.new(merchant) }
     return result
+  end
+
+  def self.find(id)
+    sql = 'SELECT * FROM merchants
+    WHERE id = $1'
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Merchant.new(results.first)
   end
 
 end
