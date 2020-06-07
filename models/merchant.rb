@@ -31,6 +31,11 @@ class Merchant
     return Tag.map_items(merchant_data)
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM merchants"
+    SqlRunner.run(sql)
+  end
+
   def self.map_items(merchant_data)
     result = merchant_data.map { |merchant| Tag.new(merchant) }
     return result
