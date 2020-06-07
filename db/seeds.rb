@@ -3,6 +3,7 @@ require_relative('../models/tag')
 require_relative('../models/merchant')
 
 Tag.delete_all()
+Merchant.delete_all()
 
 tag1 = Tag.new({ "name" => "Groceries" })
 tag2 = Tag.new({ "name" => "Entertainment" })
