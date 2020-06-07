@@ -5,8 +5,22 @@
   <title>SP£NT</title>
 </head>
 <body>
-  <section id="content">
-  <%= yield %>
+<main>
+  <nav>
+    <ul>
+      <%# <li>
+        <a href='transactions'>Transactions</a>
+      </li> %>
+      <li>
+        <a href='/merchants'>Merchants</a>
+      </li>
+      <%# <li>
+        <a href='tags'>Tags</a>
+      </li> %>
+    </ul>
+  </nav>
+  <section id='content'>
+    <%= yield %>
   </section>
   </main>
 </body>

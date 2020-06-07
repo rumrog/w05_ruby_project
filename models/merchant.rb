@@ -26,7 +26,7 @@ class Merchant
   end
 
   def update()
-    sql = "UPDATE merchant
+    sql = "UPDATE merchants
     SET
     (
       name
@@ -42,7 +42,7 @@ class Merchant
   def self.all()
     sql = "SELECT * FROM merchants"
     merchant_data = SqlRunner.run(sql)
-    return Tag.map_items(merchant_data)
+    return Merchant.map_items(merchant_data)
   end
 
   def self.delete_all()
@@ -51,7 +51,7 @@ class Merchant
   end
 
   def self.map_items(merchant_data)
-    result = merchant_data.map { |merchant| Tag.new(merchant) }
+    result = merchant_data.map { |merchant| Merchant.new(merchant) }
     return result
   end
 end
