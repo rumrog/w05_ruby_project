@@ -11,48 +11,43 @@ class Tag
   end
 
   def save()
-    sql = "INSERT INTO tags
-    (
-      name
-    )
-    VALUES
-    (
-      $1
-    )
-    RETURNING *"
+    sql = 'INSERT INTO tags
+    (name) VALUES ($1) RETURNING *'
     values = [@name]
     tag = SqlRunner.run(sql, values).first
     @id = tag['id'].to_i
   end
 
   def update()
-    sql = "UPDATE tags
-    SET
-    (
-      name
-    ) =
-    (
-      $1
-    )
-    WHERE id = $2"
+    sql = 'UPDATE tags
+    SET name = $1
+    WHERE id = $2'
     values = [@name, @id]
     SqlRunner.run(sql, values)
   end
 
   def self.all()
-    sql = "SELECT * FROM tags"
+    sql = 'SELECT * FROM tags'
     tag_data = SqlRunner.run(sql)
     return Tag.map_items(tag_data)
   end
 
   def self.delete_all()
-    sql = "DELETE FROM tags"
+    sql = 'DELETE FROM tags'
     SqlRunner.run(sql)
   end
 
   def self.map_items(tag_data)
     result = tag_data.map { |tag| Tag.new(tag) }
     return result
+  end
+
+  def self.find(id)
+    sql = 'SELECT * FROM tags
+    WHERE id = $1'
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Tag.new(results.first)
   end
 
 end

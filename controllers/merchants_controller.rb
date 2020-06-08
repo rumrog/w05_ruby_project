@@ -12,11 +12,6 @@ get '/merchants/new' do # NEW
   erb( :'merchants/new' )
 end
 
-# get '/merchants/:id' do
-#   @merchant = Merchant.find(params[:id])
-#   redirect to('/merchants/')
-# end
-
 post '/merchants' do # CREATE
   @merchant = Merchant.new(params)
   @merchant.save()

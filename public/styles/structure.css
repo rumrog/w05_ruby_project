@@ -1,0 +1,5 @@
+body {
+  background: hsla(0, 0%, 12.5%, 1);
+  background-image: radial-gradient(hsla(220, 15.5%, 19%, 1.00) 2px, transparent 0);
+  background-size: 20px 20px;
+}
