@@ -9,10 +9,10 @@
       </tr>
     <% end %>
   </tbody>
-  
+
   <tfoot>
     <tr>
-      <td><a class='new-transaction' href='/transactions/new'>+</a></td>
+      <td><div class='add-button'><a href='/transactions/new'>+</a></div></td>
       <td>TOTAL</td>
       <td> - £<%= sprintf('%.2f', @total) %></td>
     </tr>

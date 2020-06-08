@@ -68,9 +68,10 @@ h1 {
   color: hsla(218, 15%, 72%, 1.00);
 }
 
+/* ADD BUTTONS [ + ] */
 .add-button {
   background-color: hsla(213, 31%, 52%, 1);
-  min-width: 3.2em;
+  max-width: 3.2em;
   min-height: 2em;
   border-radius: 5px;
   box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
@@ -87,6 +88,8 @@ h1 {
   line-height: 0;
 }
 
+/* MAIN */
+
 main {
   display: flex;
   align-items: center;
@@ -94,7 +97,7 @@ main {
 }
 
 
-/* main li {
+main li {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -108,7 +111,7 @@ main a {
   line-height: 0;
 }
 
-.main-card {
+/*.main-card {
   background-color: hsla(223, 17%, 25%, 1);
   min-width: 80vw;
   min-height: 70vh;
