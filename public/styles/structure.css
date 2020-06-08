@@ -1,5 +1,115 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
 body {
   background: hsla(0, 0%, 12.5%, 1);
-  background-image: radial-gradient(hsla(220, 15.5%, 19%, 1.00) 2px, transparent 0);
+  background-image: radial-gradient(hsla(220, 15.5%, 19%, 1.00) 1.5px, transparent 0);
   background-size: 20px 20px;
+  font-family: Rubik, sans-serif;
+  color: hsla(218, 15%, 72%, 1.00);
+}
+
+header {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+}
+
+.header-inner-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  min-width: 50vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list li {
+  display: inline;
+  font-weight: 300;
+  min-width: 8em;
+  min-height: 2em;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
+  background-color: hsla(219, 16%, 32%, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: hsla(218, 15%, 72%, 1.00);
+}
+
+.add-button {
+  background-color: hsla(213, 31%, 52%, 1);
+  min-width: 3.2em;
+  min-height: 2em;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-button a {
+  text-decoration: none;
+  color: hsla(218, 15%, 72%, 1.00);
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+main a {
+  text-decoration: none;
+  color: hsla(219, 28%, 88%, 0.5);
+  font-size: 0.75em;
+  font-weight: 300;
+  line-height: 0;
+}
+
+.main-card {
+  background-color: hsla(223, 17%, 25%, 1);
+  width: 80vw;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
 }
