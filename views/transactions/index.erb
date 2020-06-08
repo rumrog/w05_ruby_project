@@ -1,16 +1,22 @@
-<table>
-  <% for transaction in @transactions %>
-  <tr>
-    <td><%= transaction.tag.name %></td>
-    <td><%= transaction.merchant.name %></td>
-    <td>- £<%= sprintf('%.2f', transaction.amount) %></td>
-  </tr>
-  <% end %>
-  <tr>
-    <td>TOTAL: - £<%= sprintf('%.2f', @total) %></td>
-  </tr>
+<table class='transactions-table'>
+
+  <tbody>
+    <% for transaction in @transactions %>
+      <tr>
+        <td class='col1'><%= transaction.tag.name %></td>
+        <td class='col2'><%= transaction.merchant.name %></td>
+        <td class='col3'>- £<%= sprintf('%.2f', transaction.amount) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  
+  <tfoot>
+    <tr>
+      <td><a class='new-transaction' href='/transactions/new'>+</a></td>
+      <td>TOTAL</td>
+      <td> - £<%= sprintf('%.2f', @total) %></td>
+    </tr>
+  </tfoot>
+
 </table>
 
-
-
-<a class='new-transaction' href='/transactions/new'>+</a>

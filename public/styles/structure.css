@@ -53,10 +53,14 @@ h1 {
   min-height: 2em;
   border-radius: 5px;
   box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
-  background-color: hsla(219, 16%, 32%, 1);
+  /* background-color: hsla(219, 16%, 32%, 1); */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.nav-list li:hover {
+  background-color: hsla(219, 16%, 32%, 1);
 }
 
 .nav-list a {
@@ -89,7 +93,8 @@ main {
   justify-content: center;
 }
 
-main li {
+
+/* main li {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -105,11 +110,11 @@ main a {
 
 .main-card {
   background-color: hsla(223, 17%, 25%, 1);
-  width: 80vw;
+  min-width: 80vw;
   min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
-}
+} */
