@@ -75,3 +75,23 @@ td .col3 {
   font-weight: 500;
   line-height: 0;
 }
+
+
+.foot-link {
+  background-color: hsla(213, 31%, 52%, 1);
+}
+
+.foot-link td {
+  height: 2em;
+}
+
+.foot-link a {
+  text-decoration: none;
+  color: hsla(219, 28%, 88%, 1);
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.foot-link:hover {
+  background-color: hsla(210, 34%, 63%, 1);
+}

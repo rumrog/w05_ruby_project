@@ -5,7 +5,7 @@
       <tr>
         <td class='col1'><%= transaction.tag.name %></td>
         <td class='col2'><%= transaction.merchant.name %></td>
-        <td class='col3'>- £<%= sprintf('%.2f', transaction.amount) %></td>
+        <td class='col3' align='right'>- £<%= sprintf('%.2f', transaction.amount) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -13,8 +13,7 @@
   <tfoot>
     <tr>
       <td><div class='add-button'><a href='/transactions/new'>+</a></div></td>
-      <td>TOTAL</td>
-      <td> - £<%= sprintf('%.2f', @total) %></td>
+      <td colspan='2' align='right'>TOTAL - £<%= sprintf('%.2f', @total) %></td>
     </tr>
   </tfoot>
 
