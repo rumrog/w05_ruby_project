@@ -1,7 +1,19 @@
-<ul>
-  <% for tag in @tags %>
-    <li><%= tag.name %> <a href='/tags/<%= tag.id %>/edit'>Edit</a></li>
-  <% end %>
-</ul>
+<table class='tags-table'>
 
-<a class='new-tag' href='/tags/new'>+</a>
+  <tbody>
+    <% for tag in @tags %>
+      <tr>
+        <td><%= tag.name %></td>
+        <td><a href='/tags/<%= tag.id %>/edit'>Edit</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td><div class='add-button'><a href='/tags/new'>+</a></div></td>
+      <td></td>
+    </tr>
+  </tfoot>
+
+</table>

@@ -1,8 +1,11 @@
-<h2>New Tag</h2>
+<div class='form'>
+  <h2>New Tag</h2>
 
-<form action='/tags' method='POST'>
-  <label for='tag-name'>Name:</label>
-  <input id='tag-name' type='text' name='name' placeholder='e.g. Education' />
+  <form action='/tags' method='POST'>
 
-  <input type='submit' value='Submit' />
-</form>
+    <input id='tag-name' type='text' name='name' placeholder='Name: e.g. Education' required />
+
+    <input type='submit' value='Submit' />
+
+  </form>
+</div>

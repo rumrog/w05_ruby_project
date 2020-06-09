@@ -1,8 +1,10 @@
-<h2>Edit Tag</h2>
+<div class='form'>
+  <h2>Edit Tag</h2>
 
-<form action='/tags/<%= @tag.id %>' method='POST'>
-  <label for='tag-name-field'>Name:</label>
-  <input id='tag-name-field' type='text' name='name' value='<%= @tag.name %>' />
+  <form action='/tags/<%= @tag.id %>' method='POST'>
 
-  <input type='submit' value='Save' />
-</form>
+    <input id='tag-name-field' type='text' name='name' value='<%= @tag.name %>' required />
+
+    <input type='submit' value='Save' />
+  </form>
+</div>

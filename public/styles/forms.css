@@ -1,0 +1,73 @@
+/* FORMS */
+.form {
+  margin-top: 25%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+h2 {
+  background-color: hsla(223, 17%, 25%, 1);
+  min-height: 2em;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
+  display: flex;
+  align-items: center;
+  color: hsla(219, 28%, 88%, 1);
+  padding-left: 1em;
+  font-size: 1em;
+  margin: 0;
+  border-bottom: 1px solid hsla(0, 56%, 2%, 1);
+  line-height: 2.5em;
+}
+
+.form input[type=text], input[type=number] {
+  padding: 0.5em 1.5em;
+  background-color: hsla(219, 16%, 32%);
+  border: 0 !important;
+  color: hsla(219, 28%, 88%, 1);
+  font-size: 1em;
+  border-bottom: 1px solid hsla(0, 56%, 2%, 1);
+  line-height: 2em;
+}
+
+.form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background: #2c3e50;
+  background-image: none;
+
+  padding: 0.5em 1.5em;
+  background-color: hsla(219, 16%, 32%);
+  color: hsla(219, 28%, 88%, 1);
+  font-size: 1em;
+  border-radius: 0 !important;
+  border-style: none;
+  border-bottom: 1px solid hsla(0, 56%, 2%, 1);
+  font-size: 1em;
+  line-height: 2em;
+  cursor: pointer;
+}
+
+.form input[type=submit] {
+  background-color: hsla(213, 31%, 52%, 1);
+  width: 100%;
+  padding: 0.5em 1.5em;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  font-weight: 500;
+  color: hsla(219, 28%, 88%, 1);
+  line-height: 1.5em;
+}
+
+.form input[type=submit]:hover {
+  background-color: hsla(210, 34%, 63%, 1);
+}

@@ -1,7 +1,13 @@
 table {
   border-collapse: collapse;
   min-width: 80vw;
+  max-height: 70vh;
   box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
+  margin-bottom: 5%;
+}
+
+tbody {
+  overflow: scroll;
 }
 
 tbody tr:first-child td:first-child {
@@ -44,4 +50,28 @@ tfoot tr:last-child td:last-child {
 tfoot tr {
   line-height: 2.5em;
   font-weight: 700;
+}
+
+td .col3 {
+  align-items: right;
+}
+
+/* ADD BUTTONS [ + ] */
+.add-button {
+  background-color: hsla(213, 31%, 52%, 1);
+  max-width: 3.2em;
+  min-height: 2em;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-button a {
+  text-decoration: none;
+  color: hsla(219, 28%, 88%, 1);
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 0;
 }

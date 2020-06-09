@@ -1,8 +1,11 @@
-<h2>New Merchant</h2>
+<div class='form'>
+  <h2>New Merchant</h2>
 
-<form action='/merchants' method='POST'>
-  <label for='merchant-name'>Name:</label>
-  <input id='merchant-name' type='text' name='name' placeholder='e.g. CodeClan' />
+  <form action='/merchants' method='POST'>
 
-  <input type='submit' value='Submit' />
-</form>
+    <input id='merchant-name' type='text' name='name' placeholder='Name: e.g. Codeclan' required />
+
+    <input type='submit' value='Submit' />
+
+  </form>
+</div>

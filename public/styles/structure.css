@@ -17,6 +17,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .header-wrapper {
@@ -51,8 +52,6 @@ h1 {
   font-weight: 300;
   min-width: 8em;
   min-height: 2em;
-  border-radius: 5px;
-  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
   /* background-color: hsla(219, 16%, 32%, 1); */
   display: flex;
   align-items: center;
@@ -61,31 +60,13 @@ h1 {
 
 .nav-list li:hover {
   background-color: hsla(219, 16%, 32%, 1);
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
 }
 
 .nav-list a {
   text-decoration: none;
   color: hsla(218, 15%, 72%, 1.00);
-}
-
-/* ADD BUTTONS [ + ] */
-.add-button {
-  background-color: hsla(213, 31%, 52%, 1);
-  max-width: 3.2em;
-  min-height: 2em;
-  border-radius: 5px;
-  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.add-button a {
-  text-decoration: none;
-  color: hsla(218, 15%, 72%, 1.00);
-  font-size: 2em;
-  font-weight: 500;
-  line-height: 0;
 }
 
 /* MAIN */
@@ -111,13 +92,3 @@ main a {
   line-height: 0;
 }
 
-/*.main-card {
-  background-color: hsla(223, 17%, 25%, 1);
-  min-width: 80vw;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
-} */

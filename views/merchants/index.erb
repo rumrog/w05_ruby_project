@@ -1,7 +1,19 @@
-<ul>
-  <% for merchant in @merchants %>
-    <li><%= merchant.name %> <a href='/merchants/<%= merchant.id %>/edit'>Edit</a></li>
-  <% end %>
-</ul>
+<table class='merchants-table'>
 
-<a class='new-merchant' href='/merchants/new'>+</a>
+  <tbody>
+    <% for merchant in @merchants %>
+      <tr>
+        <td><%= merchant.name %></td>
+        <td><a href='/merchants/<%= merchant.id %>/edit'>Edit</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td><div class='add-button'><a href='/merchants/new'>+</a></div></td>
+      <td></td>
+    </tr>
+  </tfoot>
+
+</table>
