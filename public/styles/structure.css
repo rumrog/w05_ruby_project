@@ -92,3 +92,7 @@ main a {
   line-height: 0;
 }
 
+main a:hover {
+  text-decoration: underline;
+}
+

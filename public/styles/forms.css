@@ -1,6 +1,9 @@
 /* FORMS */
 .form {
   margin-top: 4em;
+}
+
+.inner-form {
   display: flex;
   flex-direction: column;
 }
@@ -35,7 +38,6 @@ h2 {
   -moz-appearance: none;
   outline: 0;
   box-shadow: none;
-  background: #2c3e50;
   background-image: none;
 
   padding: 0.5em 1.5em;
@@ -69,4 +71,22 @@ h2 {
 
 .form input[type=submit]:hover {
   background-color: hsla(210, 34%, 63%, 1);
+}
+
+.form input[type=date] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background-image: none;
+
+  padding: 0.5em 1.5em;
+  background-color: hsla(219, 16%, 32%);
+  color: hsla(219, 28%, 88%, 1);
+  font-size: 1em;
+  border-radius: 0 !important;
+  border-style: none;
+  border-bottom: 1px solid hsla(0, 56%, 2%, 1);
+  font-size: 1em;
+  line-height: 2.5em;
 }

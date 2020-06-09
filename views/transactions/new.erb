@@ -2,7 +2,7 @@
   <h2>New Transaction</h2>
 
   <form action='/transactions' method='POST'>
-
+    <div class='inner-form'>
     <select name='tag_id' required>
       <option selected disabled hidden>Select a Tag</option>
       <% for tag in @tags %>
@@ -17,9 +17,11 @@
       <% end %>
     </select>
 
+    <input id="date" type="date" name="date" required />
+
     <input id='amount' type='number' name='amount' placeholder='£0.00' required />
 
     <input type='submit' value='Submit' />
-
+    </div>
   </form>
 </div>

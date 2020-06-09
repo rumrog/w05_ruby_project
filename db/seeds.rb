@@ -26,18 +26,21 @@ merchant3.save()
 transaction1 = Transaction.new({ 
   'tag_id' => tag1.id,
   'merchant_id' => merchant1.id,
+  'date' => '2020-06-06',
   'amount' => 20.00
 })
 
 transaction2 = Transaction.new({
   'tag_id' => tag2.id,
   'merchant_id' => merchant2.id,
+  'date' => '2020-06-07',
   'amount' => 30.00
 })
 
 transaction3 = Transaction.new({
   'tag_id' => tag3.id,
   'merchant_id' => merchant3.id,
+  'date' => '2020-06-08',
   'amount' => 50.00
 })
 

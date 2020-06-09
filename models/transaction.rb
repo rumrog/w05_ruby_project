@@ -3,12 +3,13 @@ require_relative('../db/sql_runner')
 class Transaction
 
   attr_reader :id
-  attr_accessor :tag_id, :merchant_id, :amount
+  attr_accessor :tag_id, :merchant_id, :date, :amount
   
   def initialize(options)
     @id = options['id'].to_i
     @tag_id = options['tag_id'].to_i
     @merchant_id = options['merchant_id'].to_i
+    @date = options['date']
     @amount = options['amount'].to_f
   end
 
@@ -16,15 +17,16 @@ class Transaction
     sql = 'INSERT INTO transactions
     (
       tag_id, 
-      merchant_id, 
+      merchant_id,
+      date, 
       amount
     )
     VALUES
     (
-      $1, $2, $3
+      $1, $2, $3, $4
     )
     RETURNING *'
-    values = [@tag_id, @merchant_id, @amount]
+    values = [@tag_id, @merchant_id, @date, @amount]
     transaction = SqlRunner.run(sql, values).first
     @id = transaction['id'].to_i
   end
