@@ -1,7 +1,7 @@
-<table class='transactions-table'>
+<table class='sort-by'>
 
   <tbody>
-    <% for transaction in @transactions %>
+    <% for transaction in @sorted_transactions %>
       <tr>
         <td class='col1'><%= transaction.tag.name %></td>
         <td class='col2'><%= transaction.merchant.name %></td>
@@ -20,4 +20,3 @@
   </tfoot>
 
 </table>
-
