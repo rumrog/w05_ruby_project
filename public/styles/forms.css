@@ -72,7 +72,7 @@ h2 {
 }
 
 .form input[type=submit]:hover,
-.filter input[type=submit]:hover {
+.filter button:hover {
   background-color: hsla(210, 34%, 63%, 1);
 }
 
@@ -95,11 +95,11 @@ h2 {
   display: flex;
 }
 
-.filter input[type=submit] {
+.filter button {
   background-color: hsla(213, 31%, 52%, 1);
-  padding: 1em 1.5em;
-  width: 1.5em;
-  height: 1em; 
+  padding: 0.5em 0.5em;
+  width: 2em;
+  height: 2em; 
   border-radius: 0 5px 5px 0;
   box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
   border: none;
@@ -112,7 +112,6 @@ h2 {
   text-decoration: none;
   color: hsla(219, 28%, 88%, 1);
   font-size: 1em;
-  font-weight: 500;
   line-height: 0;
 }
 

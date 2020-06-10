@@ -57,7 +57,7 @@ td .col3 {
 }
 
 tfoot tr td:first-child .filter-wrapper {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     justify-content: space-between;
 }

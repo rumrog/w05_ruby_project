@@ -17,11 +17,10 @@
       <td colspan='4'>
       <div class='filter-wrapper'>
 
-      <a class='add-button' href='/transactions/new'>+</a>
+      <a class='add-button' href='/transactions/new' title='New Transaction'>+</a>
         
-      <a class='add-button' href='/transactions/sort-by-date'>s</a>
+      <a class='add-button' href='/transactions/sort-by-date' title='Sort by Date'><img style='height: .5em' src='/images/sort.png'></a>
       
-
       <form class='filter' action='/transactions/merchants' method='GET'>
           <select name='merchant_id' required>
             <option value='' hidden>Filter by Merchant</option>
@@ -29,7 +28,11 @@
             <option value='<%= merchant.id %>'><%= merchant.name %></option>
             <% end %>
           </select>
-          <input type='submit' value='Filter' />
+
+          <button type="submit" value="Submit">
+            <img style='height: 1em' src='/images/filter.png'>
+          </button>
+
         </form>
 
         <form class='filter' action='/transactions/tags' method='GET'>
@@ -39,8 +42,14 @@
             <option value='<%= tag.id %>'><%= tag.name %></option>
             <% end %>
           </select>
-          <input type='submit' value='Filter' />
+
+          <button type="submit" value="Submit">
+            <img style='height: 1em' src='/images/filter.png'>
+          </button>
+          
         </form>
+
+        <a class='actions' href='/transactions'>Clear All</a>
 
       </div>
       </td>
