@@ -2,6 +2,7 @@ require('pry')
 require_relative('../models/tag')
 require_relative('../models/merchant')
 require_relative('../models/transaction')
+require_relative('../models/budget')
 
 Tag.delete_all()
 Merchant.delete_all()
@@ -47,6 +48,13 @@ transaction3 = Transaction.new({
 transaction1.save()
 transaction2.save()
 transaction3.save()
+
+budget1 = Budget.new({
+  'tag_id' => tag1.id,
+  'amount' => 200.00
+})
+
+budget1.save()
 
 binding.pry
 nil
