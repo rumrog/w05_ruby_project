@@ -96,4 +96,13 @@ class Transaction
     return Transaction.map_items(results)
   end
 
+  def self.merchants_total(merchant_id)
+    sql = 'SELECT SUM(amount)
+    FROM transactions
+    WHERE merchant_id = $1'
+    values = [merchant_id]
+    total = SqlRunner.run(sql, values).first
+    return total["sum"].to_f
+  end
+
 end

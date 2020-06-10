@@ -19,7 +19,7 @@ end
 get '/transactions/merchants' do
   @transactions = Transaction.filter_by_merchant(params[:merchant_id].to_i)
   @merchants = Merchant.all()
-  @total = Transaction.total()
+  @total = Transaction.merchants_total(params[:merchant_id].to_i)
   erb( :'transactions/index')
 end
 
