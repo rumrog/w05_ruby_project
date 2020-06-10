@@ -3,16 +3,16 @@ require('sinatra/contrib/all')
 require_relative('../models/tag')
 also_reload('../models/*')
 
-get '/tags' do
+get '/tags' do # INDEX
   @tags = Tag.all()
   erb( :'tags/index' )
 end
 
-get '/tags/new' do
+get '/tags/new' do # NEW
   erb( :'tags/new' )
 end
 
-post '/tags' do
+post '/tags' do # CREATE
   @tag = Tag.new(params)
   @tag.save()
   redirect to ('/tags')

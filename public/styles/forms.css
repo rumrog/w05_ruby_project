@@ -1,6 +1,15 @@
 /* FORMS */
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background-image: none;
+}
+
 .form {
-  margin-top: 4em;
+  margin-top: 2em;
 }
 
 .inner-form {
@@ -34,16 +43,9 @@ h2 {
 }
 
 .form select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  outline: 0;
-  box-shadow: none;
-  background-image: none;
-
   padding: 0.5em 1.5em;
   background-color: hsla(219, 16%, 32%);
   color: hsla(219, 28%, 88%, 1);
-  font-size: 1em;
   border-radius: 0 !important;
   border-style: none;
   border-bottom: 1px solid hsla(0, 56%, 2%, 1);
@@ -69,16 +71,12 @@ h2 {
   line-height: 1.5em;
 }
 
-.form input[type=submit]:hover {
+.form input[type=submit]:hover,
+.filter input[type=submit]:hover {
   background-color: hsla(210, 34%, 63%, 1);
 }
 
 .form input[type=date] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  outline: 0;
-  box-shadow: none;
-  background-image: none;
 
   padding: 0.5em 1.5em;
   background-color: hsla(219, 16%, 32%);
@@ -88,5 +86,46 @@ h2 {
   border-style: none;
   border-bottom: 1px solid hsla(0, 56%, 2%, 1);
   font-size: 1em;
-  line-height: 2.5em;
+  line-height: 2em;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* FILTER FORMS */
+.filter {
+  display: flex;
+}
+
+.filter input[type=submit] {
+  background-color: hsla(213, 31%, 52%, 1);
+  padding: 1em 1.5em;
+  width: 1.5em;
+  height: 1em; 
+  border-radius: 0 5px 5px 0;
+  box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: hsla(219, 28%, 88%, 1);
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 0;
+}
+
+.filter select {
+  background-color: hsla(219, 16%, 32%);
+  color: hsla(219, 28%, 88%, 1);
+  border-radius: 5px 0 0 5px;
+  border-style: none;
+
+  padding: 0 1em;
+
+  color: hsla(219, 28%, 88%, 0.5);
+  font-size: 1em;
+  line-height: 2em;
+  cursor: pointer;
 }

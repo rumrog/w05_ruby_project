@@ -98,7 +98,7 @@ class Transaction
 
   def self.filter_by_merchant(merchant_id)
     sql = 'SELECT * FROM transactions 
-    WHERE merchant_id = $1;'
+    WHERE merchant_id = $1'
     values = [merchant_id]
     results = SqlRunner.run(sql, values)
     return Transaction.map_items(results)
@@ -110,7 +110,24 @@ class Transaction
     WHERE merchant_id = $1'
     values = [merchant_id]
     total = SqlRunner.run(sql, values).first
-    return total["sum"].to_f
+    return total['sum'].to_f
+  end
+
+  def self.filter_by_tag(tag_id)
+    sql = 'SELECT * FROM transactions
+    WHERE tag_id = $1'
+    values = [tag_id]
+    results = SqlRunner.run(sql, values)
+    return Transaction.map_items(results)
+  end
+
+  def self.tags_total(tag_id)
+    sql = 'SELECT SUM(amount)
+    FROM transactions
+    WHERE tag_id = $1'
+    values = [tag_id]
+    total = SqlRunner.run(sql, values).first
+    return total['sum'].to_f
   end
 
 end

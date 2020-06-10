@@ -14,12 +14,15 @@
 
   <tfoot>
     <tr>
-      <td><a class='add-button' href='/transactions/new'><div>+</div></a></td> 
-      <td>
-        <a class='actions' href='/transactions/sort-by-date'>Sort by date</a>
+      <td colspan='4'>
+      <div class='filter-wrapper'>
 
+      <a class='add-button' href='/transactions/new'>+</a>
+        
+      <a class='add-button' href='/transactions/sort-by-date'>s</a>
+      
 
-        <form action='/transactions/merchants' method='GET'>
+      <form class='filter' action='/transactions/merchants' method='GET'>
           <select name='merchant_id' required>
             <option value='' hidden>Filter by Merchant</option>
             <% for merchant in @merchants %>
@@ -28,8 +31,21 @@
           </select>
           <input type='submit' value='Filter' />
         </form>
+
+        <form class='filter' action='/transactions/tags' method='GET'>
+          <select name='tag_id' required>
+            <option value='' hidden>Filter by Tag</option>
+            <% for tag in @tags %>
+            <option value='<%= tag.id %>'><%= tag.name %></option>
+            <% end %>
+          </select>
+          <input type='submit' value='Filter' />
+        </form>
+
+      </div>
       </td>
-      <td colspan='3' align='right'>TOTAL: - £<%= sprintf('%.2f', @total) %></td>
+
+      <td align='right'>TOTAL: - £<%= sprintf('%.2f', @total) %></td>
     </tr>
   </tfoot>
 

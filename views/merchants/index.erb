@@ -4,7 +4,7 @@
     <% for merchant in @merchants %>
       <tr>
         <td><%= merchant.name %></td>
-        <td align='right'><a class='actions' ref='/merchants/<%= merchant.id %>/edit'>Edit</a></td>
+        <td align='right'><a class='actions' href='/merchants/<%= merchant.id %>/edit'>Edit</a></td>
       </tr>
     <% end %>
   </tbody>

@@ -6,6 +6,7 @@ also_reload('../models/*')
 get '/transactions' do
   @transactions = Transaction.all()
   @merchants = Merchant.all()
+  @tags = Tag.all()
   @total = Transaction.total()
   erb( :'transactions/index' )
 end
@@ -19,13 +20,22 @@ end
 get '/transactions/merchants' do
   @transactions = Transaction.filter_by_merchant(params[:merchant_id].to_i)
   @merchants = Merchant.all()
+  @tags = Tag.all()
   @total = Transaction.merchants_total(params[:merchant_id].to_i)
   erb( :'transactions/index')
 end
 
+get '/transactions/tags' do
+  @transactions = Transaction.filter_by_tag(params[:tag_id].to_i)
+  @merchants = Merchant.all()
+  @tags = Tag.all()
+  @total = Transaction.tags_total(params[:tag_id].to_i)
+  erb( :'transactions/index')
+end
+
 get '/transactions/new' do
-  @tags = Tag.all
-  @merchants = Merchant.all
+  @tags = Tag.all()
+  @merchants = Merchant.all()
   erb( :'transactions/new' )
 end
 
