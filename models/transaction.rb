@@ -70,14 +70,6 @@ class Transaction
     return total["sum"].to_f
   end
 
-  # def self.sort_by(type)
-  #   sql = 'SELECT * FROM transactions
-  #   ORDER BY $1'
-  #   values = [type]
-  #   sorted = SqlRunner.run(sql, values)
-  #   return Transaction.map_items(sorted)
-  # end
-
   def self.sort_by_date()
     sql = 'SELECT * FROM transactions
     ORDER BY date'
@@ -85,18 +77,23 @@ class Transaction
     return Transaction.map_items(sorted)
   end
 
-  # def self.sort_by_tag()
-  #   sql = 'SELECT * FROM transactions
-  #   ORDER BY tag_id'
-  #   sorted = SqlRunner.run(sql)
-  #   return Transaction.map_items(sorted)
+  # def self.filter_by_merchant(merchant_name)
+  #   sql = 'SELECT transactions.* 
+  #   FROM transactions 
+  #   JOIN merchants 
+  #   ON merchants.id = transactions.merchant_id 
+  #   WHERE merchants.name = $1;'
+  #   values = [merchant_name]
+  #   results = SqlRunner.run(sql, values)
+  #   return Transaction.map_items(results)
   # end
 
-  # def self.sort_by_amount()
-  #   sql = 'SELECT * FROM transactions
-  #   ORDER BY amount'
-  #   sorted = SqlRunner.run(sql)
-  #   return Transaction.map_items(sorted)
-  # end
+  def self.filter_by_merchant(merchant_id)
+    sql = 'SELECT * FROM transactions 
+    WHERE merchant_id = $1;'
+    values = [merchant_id]
+    results = SqlRunner.run(sql, values)
+    return Transaction.map_items(results)
+  end
 
 end
