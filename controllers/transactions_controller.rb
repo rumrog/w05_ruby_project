@@ -34,3 +34,16 @@ post '/transactions' do
   transaction.save
   redirect to ('/transactions')
 end
+
+post '/transactions/:id' do # UPDATE
+  transaction_to_update = Transaction.new(params)
+  transaction_to_update.update()
+  redirect to '/transactions'
+end
+
+get '/transactions/:id/edit' do # EDIT
+  @transaction = Transaction.find(params[:id].to_i)
+  @tags = Tag.all
+  @merchants = Merchant.all
+  erb( :'transactions/edit')
+end
