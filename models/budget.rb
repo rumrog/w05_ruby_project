@@ -27,4 +27,20 @@ class Budget
     @id = budget['id'].to_i
   end
 
+  def self.all()
+    sql = 'SELECT * FROM budgets'
+    budget_data = SqlRunner.run(sql)
+    return Budget.map_items(budget_data)
+  end
+
+  def self.delete_all()
+    sql = 'DELETE FROM budgets'
+    SqlRunner.run(sql)
+  end
+
+  def self.map_items(budget_data)
+    result = budget_data.map { |budget| Budget.new(budget) }
+    return result
+  end
+
 end
