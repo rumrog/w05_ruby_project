@@ -84,15 +84,18 @@ main li {
   padding: 0;
 }
 
-main a {
+/* ACTIONS STYLE Edit & Delete */
+
+main .actions {
   text-decoration: none;
   color: hsla(219, 28%, 88%, 0.5);
   font-size: 0.75em;
   font-weight: 300;
   line-height: 0;
+  cursor: pointer;
 }
 
-main a:hover {
+main .actions:hover {
   text-decoration: underline;
 }
 

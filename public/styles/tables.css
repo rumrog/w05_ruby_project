@@ -59,16 +59,14 @@ td .col3 {
 /* ADD BUTTONS [ + ] */
 .add-button {
   background-color: hsla(213, 31%, 52%, 1);
-  max-width: 3.2em;
-  min-height: 2em;
+  width: 1.5em;
+  height: 1em; 
   border-radius: 5px;
   box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.add-button a {
   text-decoration: none;
   color: hsla(219, 28%, 88%, 1);
   font-size: 2em;
@@ -76,6 +74,9 @@ td .col3 {
   line-height: 0;
 }
 
+.add-button:hover {
+  background-color: hsla(210, 34%, 63%, 1);
+}
 
 .foot-link {
   background-color: hsla(213, 31%, 52%, 1);

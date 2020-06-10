@@ -4,15 +4,15 @@
     <% for merchant in @merchants %>
       <tr>
         <td><%= merchant.name %></td>
-        <td align='right'><a href='/merchants/<%= merchant.id %>/edit'>Edit</a></td>
+        <td align='right'><a class='actions' ref='/merchants/<%= merchant.id %>/edit'>Edit</a></td>
       </tr>
     <% end %>
   </tbody>
-
+ 
   <tfoot class='foot-link'>
     <tr>
-      <td colspan='2' align='center'><a href='/merchants/new'>+</a></td>
+      <td colspan='2' align='center'><a href='/merchants/new'><div>+</div></a></td>
     </tr>
-  </tfoot>
+  </tfoot>    
 
 </table>

@@ -4,14 +4,14 @@
     <% for tag in @tags %>
       <tr>
         <td><%= tag.name %></td>
-        <td align='right'><a href='/tags/<%= tag.id %>/edit'>Edit</a></td>
+        <td align='right'><a class='actions' href='/tags/<%= tag.id %>/edit'>Edit</a></td>
       </tr>
     <% end %>
   </tbody>
 
   <tfoot class='foot-link'>
     <tr>
-      <td colspan='2' align='center'><a href='/tags/new'>+</a></td>
+      <td colspan='2' align='center'><a href='/tags/new'><div>+</div></a></td>
     </tr>
   </tfoot>
 

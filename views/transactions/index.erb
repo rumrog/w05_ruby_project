@@ -6,7 +6,7 @@
         <td class='col1'><%= transaction.tag.name %></td>
         <td class='col2'><%= transaction.merchant.name %></td>
         <td class='col3'><%= transaction.date %></td>
-        <td align='right'><a href='/transactions/<%= transaction.id %>/edit'>Edit</a></td>
+        <td align='right'><a class='actions' href='/transactions/<%= transaction.id %>/edit'>Edit</a></td>
         <td class='col4' align='right'>- £<%= sprintf('%.2f', transaction.amount) %></td>
       </tr>
     <% end %>
@@ -14,9 +14,9 @@
 
   <tfoot>
     <tr>
-      <td><div class='add-button'><a href='/transactions/new'>+</a></div></td>
+      <td><a class='add-button' href='/transactions/new'><div>+</div></a></td> 
       <td>
-        <a href='/transactions/sort-by-date'>Sort by date</a>
+        <a class='actions' href='/transactions/sort-by-date'>Sort by date</a>
 
 
         <form action='/transactions/merchants' method='GET'>
