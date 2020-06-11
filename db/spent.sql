@@ -24,7 +24,6 @@ CREATE TABLE transactions (
 
 CREATE TABLE budgets (
   id SERIAL PRIMARY KEY,
-  tag_id INT REFERENCES tags(id) ON DELETE CASCADE,
   amount NUMERIC
 );
 

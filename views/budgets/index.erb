@@ -1,0 +1,15 @@
+<table class='budgets-table'>
+  <tbody>
+      <% for budget in @budgets %>
+        <tr>
+        <td> Current Budget </td>
+        <td align='left'><a class='actions' href='/budgets/<%= budget.id %>/edit' style='font-size: 1em'>Edit</a></td>
+        <td align='left'>£<%= sprintf('%.2f', budget.amount) %></td>
+        <td align='right'>Remaining Amount<td>
+        <td> £<%=  sprintf('%.2f', budget.amount - @total) %></td>
+      </tr>
+    <% end %> 
+  </tbody>  
+
+</table>
+

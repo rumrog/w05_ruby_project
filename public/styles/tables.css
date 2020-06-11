@@ -6,8 +6,16 @@ table {
   margin: 0 auto 5%;
 }
 
-tbody {
-  overflow: scroll;
+.budgets-table tbody tr {
+  border: none;
+}
+
+.budgets-table tbody td:first-child {
+  border-bottom-left-radius: 10px !important;
+}
+
+.budgets-table tbody td:last-child {
+  border-bottom-right-radius: 10px !important;
 }
 
 tbody tr:first-child td:first-child {

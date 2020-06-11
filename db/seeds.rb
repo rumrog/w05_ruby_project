@@ -7,6 +7,7 @@ require_relative('../models/budget')
 Tag.delete_all()
 Merchant.delete_all()
 Transaction.delete_all()
+Budget.delete_all()
 
 tag1 = Tag.new({ 'name' => 'Groceries' })
 tag2 = Tag.new({ 'name' => 'Entertainment' })
@@ -50,7 +51,6 @@ transaction2.save()
 transaction3.save()
 
 budget1 = Budget.new({
-  'tag_id' => tag1.id,
   'amount' => 200.00
 })
 

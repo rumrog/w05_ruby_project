@@ -1,0 +1,10 @@
+<div class='form'>
+  <h2>Edit Budget</h2>
+
+  <form action='/budgets/<%= @budget.id %>' method='POST'>
+
+    <input type='number' step='0.01' name='amount' placeholder='£0.00' value='<%= @budget.amount %>' required />
+
+    <input type='submit' value='Save' />
+  </form>
+</div

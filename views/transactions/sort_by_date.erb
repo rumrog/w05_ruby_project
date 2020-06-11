@@ -3,11 +3,11 @@
   <tbody>
     <% for transaction in @sorted_transactions %>
       <tr>
-        <td class='col1'><%= transaction.tag.name %></td>
-        <td class='col2'><%= transaction.merchant.name %></td>
-        <td class='col3'><%= transaction.date %></td>
+        <td><%= transaction.tag.name %></td>
+        <td><%= transaction.merchant.name %></td>
+        <td><%= transaction.date %></td>
         <td align='right'><a class='actions' href='/transactions/<%= transaction.id %>/edit'>Edit</a></td>
-        <td class='col4' align='right'>- £<%= sprintf('%.2f', transaction.amount) %></td>
+        <td align='right'>- £<%= sprintf('%.2f', transaction.amount) %></td>
       </tr>
     <% end %>
   </tbody>

@@ -31,6 +31,14 @@ class Transaction
     @id = transaction['id'].to_i
   end
 
+  def update()
+    sql = 'UPDATE transactions
+    SET amount = $1
+    WHERE id = $2'
+    values = [@amount, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = 'SELECT * FROM transactions'
     transaction_data = SqlRunner.run(sql)
@@ -84,17 +92,6 @@ class Transaction
     sorted = SqlRunner.run(sql)
     return Transaction.map_items(sorted)
   end
-
-  # def self.filter_by_merchant(merchant_name)
-  #   sql = 'SELECT transactions.* 
-  #   FROM transactions 
-  #   JOIN merchants 
-  #   ON merchants.id = transactions.merchant_id 
-  #   WHERE merchants.name = $1;'
-  #   values = [merchant_name]
-  #   results = SqlRunner.run(sql, values)
-  #   return Transaction.map_items(results)
-  # end
 
   def self.filter_by_merchant(merchant_id)
     sql = 'SELECT * FROM transactions 
